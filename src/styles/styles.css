@@ -1,0 +1,195 @@
+@import "./reset.css";
+@import "./variables.css";
+
+body {
+  min-height: 100vh;
+  font-family: "Titillium Web", sans-serif;
+}
+
+#pageContainer {
+  display: flex;
+}
+
+main {
+  padding: 4rem 11.2rem;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 11.4rem;
+}
+
+#imageWrapper {
+  object-fit: cover;
+  width: 50%;
+  max-height: 100vh;
+}
+
+/*Logo/Header*/
+
+main header .logo {
+  display: flex;
+  align-items: center;
+}
+
+main header .logo span {
+  font-size: 2.4rem;
+  color: var(--gray-900);
+  font-weight: bold;
+}
+
+main header .logo img {
+  width: 3.5rem;
+}
+
+/*Formulario*/
+
+main form {
+  max-width: 60%;
+}
+
+main form header > h1 {
+  font-size: 3.6rem;
+  color: var(--gray-800);
+  word-wrap: break-word;
+}
+
+main form header > p {
+  margin: 1.6rem 0 4rem 0;
+  word-wrap: break-word;
+}
+
+/*Input's*/
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  position: relative;
+}
+
+form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+}
+
+.label-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.label-wrapper a {
+  font-weight: bold;
+  color: var(--purple);
+  margin-bottom: 0.6rem;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+
+  padding: 1.6rem 1.2rem;
+  border: 0.1rem solid #e2e8f0;
+  border-radius: 0.4rem;
+  transition: 0.3s;
+}
+
+form .input-wrapper:hover,
+form .input-wrapper:focus {
+  border-color: var(--purple);
+}
+
+.toggle-pass {
+  position: absolute;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.toggle-pass img {
+  width: 2rem;
+  height: 2rem;
+}
+
+form button[type="submit"] {
+  margin-block: 3.2rem;
+  width: 100%;
+  padding: 1.6rem 2.4rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: var(--purple);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.6rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  background-color: var(--purple-hover);
+}
+
+/*Login Container*/
+
+form div#logInContainer {
+  display: flex;
+}
+
+form div#logInContainer a {
+  font-weight: bold;
+  color: var(--purple);
+  transition: 0.3s;
+}
+
+form div#logInContainer a:hover,
+form div#logInContainer a:focus {
+  color: var(--purple-hover);
+}
+
+@media (max-width: 834px) {
+  #imageWrapper {
+    display: none;
+  }
+
+  body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    width: 100vw;
+  }
+
+  main form {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 2rem 4rem;
+  }
+
+  main form header > h1 {
+    font-size: 3.1rem;
+  }
+}
